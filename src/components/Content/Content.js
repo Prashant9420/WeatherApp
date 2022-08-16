@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import style from "./Content.module.css";
-import emailjs from "emailjs-com";
 const Content = () => {
 
   const [Name,setName]=useState("");
@@ -10,15 +9,8 @@ const Content = () => {
   const [pass,setPass]=useState("");
   const [confPass,setConfPass]=useState("");
   const handleClick=(e)=>{
-    e.preventDefault();
-    // alert(Name);
-    // alert(lastName);
-    // alert(email);
-    // alert(phno);
-    // alert(pass);
-    // alert(confPass);
-    
-    if(pass!=confPass){  
+    e.preventDefault();    
+    if(pass!==confPass){  
       alert("passwords not matching");
       setConfPass("");
       setPass("");
