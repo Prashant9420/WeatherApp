@@ -10,14 +10,28 @@ const Content = () => {
   const [confPass,setConfPass]=useState("");
   const handleClick=(e)=>{
     e.preventDefault();    
-    if(pass!==confPass){  
+    if(phno.length!==10){
+      alert("invalid phone number")
+    }
+    else if(pass.length<6){
+      alert("password too short..!!")
+    }
+    else if(pass!==confPass){  
       alert("passwords not matching");
       setConfPass("");
       setPass("");
     }
-    if(pass.length<6){
-      alert("password too short..!!")
+    else{
+      alert("form submitted..!!!")
+      console.log("name: ",Name);
+      console.log("last name: ",lastName);
+      console.log("email: ",email);
+      console.log("phone number: ",phno);
+      console.log("password: ",pass);
+      console.log("confirm password: ",confPass);
     }
+    
+    
   }
   return (
     <div className={style.container}>

@@ -3,9 +3,10 @@ import style from "./Header.module.css";
 const Header = () => {
   return (
     <nav>
-        <h1 className={style.temph1}>&nbsp</h1>
+        <div className={style.contain}>
         <h1>Create New Account</h1>
         <h2>Conatct us</h2>
+        </div>
     </nav>
   )
 }
