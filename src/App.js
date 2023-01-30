@@ -10,7 +10,7 @@ function App(){
   const [load,setLoad]=useState(false);
   const [weatherIconLink,setWeatherIconLink]=useState("");
   function getTemp(){
-    if(!cityName){alert("enter the city name u mf");return;}
+    if(!cityName){alert("enter the city name");return;}
     setLoad(true);
     fetch(`https://api.weatherapi.com/v1/current.json?key=9bf75f339b35415b93b192507232101&q=${cityName}`).then((resp)=>{
       resp.json().then((res)=>
@@ -32,6 +32,7 @@ function App(){
     
   }
   useEffect(()=>{
+    setCity(cityName.trim());
     if(cityName.length===0)
       setTemp("");
   },[cityName])
@@ -50,7 +51,7 @@ function App(){
       
       }}>
       
-      <InputGroup className="mb-3" style={{width:'60%',margin:'10px 10px'}} onChange={(e)=>setCity(e.target.value)}>
+      <InputGroup className="mb-3" style={{width:'80vw'}} value={cityName} onChange={(e)=>setCity(e.target.value)}>
         <Form.Control
           placeholder="Enter City Name"
           aria-label="Enter City Name"
