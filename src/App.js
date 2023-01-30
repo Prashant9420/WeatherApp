@@ -3,9 +3,7 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import {Button} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import User from './user'
 import bgimg from './weatherbg.jpg'
-import {BrowserRouter,Routes,Route} from 'react-router-dom'
 function App(){
   const [cityName,setCity]=useState("");
   const [temp,setTemp]=useState("");
@@ -38,7 +36,6 @@ function App(){
       setTemp("");
   },[cityName])
   return(
-    <BrowserRouter>
     <div style={
       {
         height:'100vh',
@@ -66,12 +63,8 @@ function App(){
       {(temp.length!==0 && cityName.length!==0)?
       <div style={{display:'flex',alignItems:'center',justifyContent:'space-around',}}><h2 style={{padding:"10px 20px",color:'white'}}>  {"feels like "+Math.round(temp)+"°C"}</h2><img src={weatherIconLink} alt='weather icon'/></div>:
       (load===true)?<h2>loading...</h2>:
-      <h2 style={{height:'60px'}}></h2>}
+      <div style={{height:'60px'}}></div>}
     </div>
-    <Routes>
-      <Route path='/user' element={<User/>}/>
-    </Routes>
-    </BrowserRouter>
   )
 }
 export default App;
