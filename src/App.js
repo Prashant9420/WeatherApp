@@ -378,7 +378,7 @@ function App(){
       <Button variant="contained" onClick={()=>getTemp()}>Get Weather Info</Button>
       </div>
       {(temp.length!==0)?
-      <div style={{border:'10px solid white',borderRadius:'20px',marginBottom:'20px',backgroundColor:`rgb(${"0,0,0,0.7"})`}}>
+      <div style={{border:'10px solid white',borderRadius:'20px',marginBottom:'20px',backgroundColor:`rgb(${"0,0,0,0.7"})`,marginTop:(window.innerWidth<=590)?'100px':null}}>
       <div><h2 style={{padding:"10px 20px",color:'white'}}>  {"feels like "+Math.round(weatherData.main.temp-273.15)+"°C"}</h2></div>
       <div><h2 style={{padding:"10px 20px",color:'white'}}>  {"Humidity: "+weatherData.main.humidity+"%"}</h2></div>
       <div><h2 style={{padding:"10px 20px",color:'white'}}>  {"Pressure: "+weatherData.main.pressure+" hectopascal"}</h2></div>
