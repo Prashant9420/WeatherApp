@@ -1,0 +1,21 @@
+.title{
+    margin-top:'30px';
+    padding:10px 10px;
+    border:10px solid white;
+    border-radius:10px;
+    box-shadow:-10px 10px 8px grey;
+    color:white;
+    background-color:rgb(0,0,0,0.2);
+}
+.country{
+    display:flex;
+    flex-direction:column;
+    height:20%;
+    justify-content:space-between;
+    width:30%;
+}
+@media screen and (max-width:590px) {
+    .country{
+    width: 90%;    
+    }
+}

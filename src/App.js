@@ -10,7 +10,7 @@ import MenuItem from '@mui/material/MenuItem';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import TextField from '@mui/material/TextField';
 import bgimg from './peakpx.jpg'
-import './App.css'
+import styles from './App.module.css'
 function App(){
   const [cityName,setCity]=useState("");
   const [countryCode,setCountry]=useState("");
@@ -92,8 +92,8 @@ function App(){
       
       }}>
         <ToastContainer />
-        <h1 style={{marginTop:'30px',padding:'10px 10px' ,border:'10px solid white',borderRadius:'10px',boxShadow:'-10px 10px 8px grey',color:'white',backgroundColor:`rgb(${"0,0,0,0.2"})`}}>Weather App</h1>
-        <div style={{display:'flex',flexDirection:'column',height:'20%',justifyContent:'space-between',width:'30%'}}>
+        <h1 className={styles.title}>Weather App</h1>
+        <div className={styles.country}>
         <FormControl fullWidth variant="filled">
         <InputLabel id="demo-simple-select-filled-label">Select Country</InputLabel>
         <Select
