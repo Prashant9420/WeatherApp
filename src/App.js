@@ -74,20 +74,21 @@ function App(){
   return(
     <div style={
       {
-        height:(window.innerWidth<=590)?'auto':'100vh',
+        height:'100vh',
         width:'100vw',
         display:'flex',
         // border:'2px solid red',
         justifyContent:'space-between',
         alignItems:'center',
         flexDirection:'column',
-        backgroundImage:`url(${bgimg})`,
-        backgroundSize:'cover',
-        backgroundAttachment:'fixed',
+        // backgroundImage:`url(${bgimg})`,
+        // backgroundSize:'cover',
+        // backgroundAttachment:'fixed',
         
-        backgroundRepeat:'no-repeat'
+        // backgroundRepeat:'no-repeat'
       
       }}>
+        <img src={bgimg} className={styles.back}></img>
         <ToastContainer />
         <h1 className={styles.title}>Weather App</h1>
         <div className={styles.country}>
@@ -209,7 +210,7 @@ function App(){
     <MenuItem value="ID">Indonesia</MenuItem>
     <MenuItem value="IR">Iran, Islamic Republic of</MenuItem>
     <MenuItem value="IQ">Iraq</MenuItem>
-    <MenuItem value="IE">Ireland</MenuItem>
+    <MenuItem value="IE">Irelancoverd</MenuItem>
     <MenuItem value="IM">Isle of Man</MenuItem>
     <MenuItem value="IL">Israel</MenuItem>
     <MenuItem value="IT">Italy</MenuItem>

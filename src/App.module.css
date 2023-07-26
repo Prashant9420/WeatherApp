@@ -1,5 +1,5 @@
 .title{
-    margin-top:'30px';
+    margin-top:30px;
     padding:10px 10px;
     border:10px solid white;
     border-radius:10px;
@@ -14,10 +14,21 @@
     justify-content:space-between;
     width:30%;
 }
+.back{
+    position:absolute;
+    z-index: -1;
+    object-fit:cover;
+    position: fixed;
+    /* border: 2px solid red; */
+    width: 100vw;
+    height: 100vh;
+
+}
 @media screen and (max-width:590px) {
     .country>Button{ 
         margin: 20px 0px;
     }
+    
     .country{
     width: 90%;    
     }
