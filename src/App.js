@@ -100,7 +100,7 @@ function App(){
           labelId="demo-simple-select-filled-label"
           id="demo-simple-select-filled"
           value={countryCode}
-          sx={{border:'2px solid white',backgroundColor:`rgb(${"0,0,0,0.5"})`,color:'white'}}
+          sx={{border:'2px solid white',backgroundColor:`rgb(${"0,0,0,0.5"})`,color:'white',marginBottom:(window.innerWidth<=590)?'20px':null}}
           onChange={(e)=>setCountry(e.target.value)}
         >
           <MenuItem value="">
@@ -368,7 +368,8 @@ function App(){
               "& input": {
                   backgroundColor:`rgb(${"0,0,0,0.4"})`,
                   color:'white',
-                  border:'2px solid white'
+                  border:'2px solid white',
+                  
               }
           }
       }}

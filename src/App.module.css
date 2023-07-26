@@ -15,6 +15,9 @@
     width:30%;
 }
 @media screen and (max-width:590px) {
+    .country>Button{ 
+        margin: 20px 0px;
+    }
     .country{
     width: 90%;    
     }
