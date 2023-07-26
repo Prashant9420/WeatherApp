@@ -88,6 +88,7 @@ function App(){
         flexDirection:'column',
         backgroundImage:`url(${bgimg})`,
         backgroundSize:'cover',
+        backgroundAttachment:'fixed',
         backgroundRepeat:'no-repeat'
       
       }}>
